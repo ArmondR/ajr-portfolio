@@ -8,9 +8,13 @@ This application is a portfolio site for my work. This is a renovation of the us
 
 The application can be accessed via link provided below. The application is deployed through github pages.
 
+## Other Notes
+
+This project is still in its skeletal stage. In the near future there will be updates to style the page and add conditional rendering.
+
 ## Links
 
-[Link to Deployed Site](https://drive.google.com/file/d/1ilRVEYgWZ3OWvobY4eR-4sF-8VbgNGRz/view?usp=sharing)
+[Link to Deployed Site](https://armondr.github.io/ajr-portfolio/)
 
 [Link to Application Repository](https://github.com/ArmondR/ajr-portfolio)
 
