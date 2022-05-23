@@ -20,7 +20,7 @@ This project is still in its skeletal stage. In the near future there will be up
 
 ## Screenshot
 
-![Deployed Screenshot]()
+![Deployed Screenshot](deployed-app.png)
 
 ### License
 
