@@ -3,7 +3,7 @@ import React from 'react';
 function About() {
     return (
         <section className="my-5">
-            <h1 id="about">About Me</h1>
+            <h1 id="about">About</h1>
             <p>
             Full-stack web developer currently working to earn a certificate in Full Stack Web Development offered through Rutgers University. 
           Having prior education in graphic design and animation; creativity is a naturally developed asset. Known as having creative ideas 

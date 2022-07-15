@@ -1,4 +1,6 @@
 import React, {useState} from 'react'
+import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 
 // import components
@@ -6,11 +8,21 @@ import About from './components/About';
 import Header from './components/Header';
 import Projects from './components/Projects';
 import ContactForm from './components/Contact';
+import Resume from './components/Resume';
+import Footer from './components/Footer';
+
+const httpLink = createHttpLink({
+  uri: 'http://localhost:3001/graphql',
+
+});
+
+const client = new ApolloClient({
+  link: httpLink,
+  cache: new InMemoryCache(),
+
+});
 
 function App() {
-
-  const [contactSelected, setContactSelected] = useState(false);
-
 
   const [navSections] = useState([
     { 
@@ -22,30 +34,40 @@ function App() {
   const [currentSection, setCurrentSection] = useState(navSections[0]);
 
   return (
+    <ApolloProvider client={client}>
+      <Router>
     <div>
       <Header
         navSections={navSections}
         setCurrentSection={setCurrentSection}
         currentSection={currentSection}
-        contactSelected={contactSelected}
-        setContactSelected={setContactSelected}
         ></Header>
       <main>
-        {!contactSelected ? (
-          <>
-          <Projects currentSection={currentSection}></Projects>
-          <About></About>
-          </>
-        ) : (
-          <ContactForm></ContactForm>
-        )}
         
-        
+          <Routes>
+            <Route
+              path="/"
+              element={<About />}
+            />
+            <Route
+              path="/Projects"
+              element={<Projects currentSection={currentSection}></Projects>}
+            />
+            <Route
+              path="/Contact"
+              element={<ContactForm />}
+            />
+            <Route
+              path="/Resume"
+              element={<Resume />}
+            />
+          </Routes>
+       
       </main>
-      <footer>
-        
-      </footer>
+     <Footer />
     </div>
+    </Router>
+    </ApolloProvider>
   
   );
 }
