@@ -8,8 +8,6 @@ function Header(props) {
         navSections = [],
         setCurrentSection,
         currentSection,
-        contactSelected,
-        setContactSelected
     } = props;
 
     useEffect(() => {
@@ -27,20 +25,19 @@ function Header(props) {
             <nav>
             <ul className="flex-row">
                 <li className="mx-2">
-                    <Link to="/" onClick={() => setContactSelected(false)}>
+                    <Link to="/">
                         About
                     </Link>
                 </li>
                     {navSections.map((section) => (
                         <li
-                        className={`mx-1 ${currentSection.name === section.name && !contactSelected && 'navActive'}`}
+                        className={`mx-2 ${currentSection.name === section.name}`}
                         key={section.name}
                         >
                         <Link to="/Projects">
                            
                                 <span onClick = {() => {
                                     setCurrentSection(section)
-                                    setContactSelected(false);
                                 }} 
                                 >
                                     {capitalizeFirstLetter(section.name)}
@@ -50,11 +47,10 @@ function Header(props) {
                     ))}
 
                     <li className="mx-2">
-                     <Link to="/Contact" className={`mx-2 ${contactSelected && 'navActive'}`}>
-                        <span onClick={() => {
-                            setContactSelected(true)
-                        }}
-                        >Contact</span>
+                     <Link to="/Contact" className="mx-2">
+                        <span>
+                            Contact
+                        </span>
                     </Link>
                     </li>
 
