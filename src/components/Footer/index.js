@@ -7,7 +7,7 @@ import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons"
 function Footer() {
     
     return (
-        <section>
+        <section className="footer">
             	<div className="icons text-6xl">
 	
   <a href="tel:6093849808">

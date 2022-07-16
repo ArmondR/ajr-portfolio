@@ -35,7 +35,7 @@ function ContactForm() {
 
     return (
         <section>
-            <form id="contact-form" onSubmit={handleSubmit}>
+            <form className="contactForm" id="contact-form" onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="name">Name:</label>
                     <input type="text" name="name" defaultValue={formState.name} onBlur={handleChange} />

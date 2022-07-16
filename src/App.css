@@ -5,6 +5,12 @@
 
 }
 
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
 /* removes inherited link properties */
 a {
   color: inherit;
@@ -59,6 +65,65 @@ header ul li:hover {
   background: var(---tertiary-color);
   color: var(--primary-color);
   border-radius: 15px;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 27vw;
+  object-fit: cover;
+  border-bottom: 2px solid var(---tertiary-color);
+}
+
+.card-link {
+  background-color: var(---tertiary-color);
+  color: var(--primary-color);
+  border-radius: 10px;
+}
+
+.card-link:hover{
+  background-color: var(--primary-color);
+  color: var(---tertiary-color);
+}
+
+.row-cols-md-2>* {
+  width: 40%;
+}
+
+.g-4 {
+  justify-content: space-around;
+}
+
+main {
+  margin: 20px;
+}
+
+.cards {
+  margin: 0 10px 10px;
+  border: 2px solid var(---tertiary-color);
+  border-radius: 10px;
+}
+
+.cards:hover{
+  
+  border: 5px solid var(--primary-color);
+  
+}
+
+.card-link-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card-link {
+  font-size: 1vw;
+}
+
+.contactForm {
+  text-align: center;
+}
+
+.footer {
+  text-align: center;
 }
 /* The above style is my added styling the below is from native react */
 
