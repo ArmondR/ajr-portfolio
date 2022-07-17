@@ -54,7 +54,7 @@ function ProjectList({ section }) {
           key={image.name}
           >
             <Card 
-            style={{ width: '30rem' }}
+            //style={{ width: '30rem' }}
             className='cards'
             >
               <Card.Img 
