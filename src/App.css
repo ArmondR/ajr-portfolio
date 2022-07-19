@@ -125,6 +125,12 @@ main {
 .footer {
   text-align: center;
 }
+
+.skills {
+  display:flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
 /* The above style is my added styling the below is from native react */
 
 .App {
