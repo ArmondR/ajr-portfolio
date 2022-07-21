@@ -68,6 +68,22 @@ header ul li:hover {
   border-radius: 15px;
 }
 
+header h1 {
+  font-weight: bold;
+  margin-left: 20px;
+  font-size: 36px;
+  color: var(--secondary-color);
+  text-shadow: 0 0 8px rgba(0,0,0,0.5);
+}
+
+.profile-img {
+  height:25vh;
+  width:25vh;
+  border-radius: 50%;
+  margin: 20px;
+  object-fit: cover;
+}
+
 .card-img-top {
   width: 100%;
   height: 27vw;
@@ -119,7 +135,16 @@ main {
 }
 
 .contactForm {
-  text-align: center;
+  /* text-align: center; */
+  width:50vw;
+}
+
+label {
+  margin: 7px 0px 7px 0px;
+}
+
+input[type=text], input[type=email],textarea {
+  width: 100%;
 }
 
 .footer {
@@ -130,6 +155,11 @@ main {
   display:flex;
   justify-content: space-evenly;
   margin-top: 20px;
+}
+
+.resume-link {
+  color: #0d6efd;
+  text-decoration: underline;
 }
 /* The above style is my added styling the below is from native react */
 

@@ -18,7 +18,7 @@ function Header(props) {
         <header className='flex-row px-1'>
             <h2>
                 <Link to="/">
-                    <span role="img" aria-label='logo'>LOGO</span>Armond Rodriguez
+                    <h1>Armond Rodriguez</h1>
                 </Link>
             </h2>
             

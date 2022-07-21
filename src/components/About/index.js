@@ -1,9 +1,13 @@
 import React from 'react';
+import photo from '../../assets/images/profile-pic.png';
 
 function About() {
     return (
         <section className="my-5">
             <h1 id="about">About</h1>
+            <div>
+                <img src={photo} alt='profile' className='profile-img' />
+            </div>
             <p>
             Web developer with a certificate in full stack web development earned through Rutgers University. Having prior education in graphic design and animation; creativity is a naturally developed asset.
             Known as having creative ideas and applying them to find innovative ways to solve problems. With my educational and applied experience in graphic design I also have developed great time-management 

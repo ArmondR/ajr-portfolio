@@ -9,8 +9,8 @@ function Resume() {
     const otherSkills = ["3D Design", "Graphic Design", "AutoDesk Maya", "Pixologic ZBrush", "Adobe Creative Cloud"];
 
     return (
-        <section >
-            <span>View and Download </span><Link to={require("../../assets/images/Armond Rodriguez Technical Resume.pdf")} target="_blank">Resume</Link>
+        <section>
+            <span>View and Download </span><Link to={require("../../assets/images/Armond Rodriguez Technical Resume.pdf")} target="_blank" className='resume-link'>Resume</Link>
         <div className="skills">
             <div>
                 <h3>
