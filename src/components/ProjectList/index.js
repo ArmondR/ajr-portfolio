@@ -37,13 +37,13 @@ function ProjectList({ section }) {
             repo: 'https://github.com/dmoloney5/rut-project3-newsapi.git',
             deployed: 'https://rut-project3-newsapi.herokuapp.com/'
         },
-        {
-            name: 'Project 5',
-            section: 'projects',
-            description: 'test',
-            repo: '',
-            deployed: ''
-        }
+        // {
+        //     name: 'Project 5',
+        //     section: 'projects',
+        //     description: 'test',
+        //     repo: '',
+        //     deployed: ''
+        // }
     ])
 
     const currentProjects = projects.filter((project) => project.section === section);
