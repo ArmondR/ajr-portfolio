@@ -7,6 +7,8 @@ function ContactForm() {
 
     const [formState, setFormState] = useState({name: '', email: '', message: ''});
 
+    const {name, email, message } = formState;
+
     function handleChange(e) {
 
         if (e.target.name === 'email') {
@@ -25,37 +27,55 @@ function ContactForm() {
       if (!errorMessage) {
         setFormState({...formState, name: e.target.value })
       }
+
+      setFormState ({...formState,[e.target.name]: e.target.value});
     }
 
     function handleSubmit(e) {
+
         e.preventDefault();
         console.log(formState);
+
+        setFormState ({...formState, name: e.target.reset(), email: e.target.reset(), message: e.target = '', });
+
     }
 
 
     return (
-        <section>
-            <form className="contactForm" id="contact-form" onSubmit={handleSubmit}>
+        <section className='g-4 row row-cols-md-2 row-cols-1'>
+            <form className="col" id="contact-form" onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="name">Name:</label>
-                    <input type="text" name="name" defaultValue={formState.name} onBlur={handleChange} />
+                    <input type="text" defaultValue={name} name="name" onBlur={handleChange} />
                 </div>
                 <div>
                     <label htmlFor="email">Email address:</label>
-                    <input type="email" name="email" defaultValue={formState.email} onBlur={handleChange} />
+                    <input type="email" defaultValue={email} name="email" onBlur={handleChange} />
                 </div>
                 <div>
                     <label htmlFor="message">Message:</label>
-                    <textarea name="message" rows="5" defaultValue={formState.message} onBlur={handleChange} />
+                    <textarea name="message" defaultValue={message} rows="5"  onBlur={handleChange} />
                 </div>
                 {errorMessage && (
                     <div>
                         <p className='error-text'>{errorMessage}</p>
                     </div>
                 )}
-                <button type="submit">Submit</button>
+                <button type="submit" className='btn'>Submit</button>
             </form>
+
+            <div className='col contact-info'>
+            <h1 className='contact-header'>Contact Me</h1>
+               <p>
+                 <span>Phone: </span><a href="tel:6093849808">609.384.9808</a>
+               </p>
+               <p>
+               <span>Email: </span><a href="mailto:ajr.rodriguez095@gmail.com">ajr.rodriguez095@gmail.com</a>
+               </p>
+             </div>
+          
         </section>
+        
     )
 }
 

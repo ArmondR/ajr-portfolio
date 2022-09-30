@@ -47,7 +47,11 @@ function App() {
         
           <Routes>
             <Route
-              path="/"
+              path="/ajr-portfolio"
+              element={<About />}
+            />
+            <Route
+              path="/About"
               element={<About />}
             />
             <Route

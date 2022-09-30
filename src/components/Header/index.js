@@ -17,7 +17,7 @@ function Header(props) {
     return(
         <header className='flex-row px-1'>
             <h2>
-                <Link to="/">
+                <Link to="/About">
                     <h1>Armond Rodriguez</h1>
                 </Link>
             </h2>
@@ -25,7 +25,7 @@ function Header(props) {
             <nav>
             <ul className="flex-row">
                 <li className="mx-2">
-                    <Link to="/">
+                    <Link to="/About">
                         About
                     </Link>
                 </li>
